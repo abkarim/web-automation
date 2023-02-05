@@ -1,0 +1,23 @@
+{
+  "name": "web-automation",
+  "version": "1.0.0",
+  "description": "Web automation app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "abkarim",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "puppeteer-core": "^19.6.3",
+    "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.3"
+  }
+}
