@@ -1,21 +1,22 @@
-import puppeteer from 'puppeteer-core';
-import os from 'os';
+const puppeteer = require('puppeteer-core');
+const os = require('os');
 
 class Browser {
   #browser = null;
   #page = null;
+  #pageReloaded = false;
   #arguments = ['--disable-infobars', '--start-maximized'];
+  #networkIdleTimeout = 5000; // Milliseconds
+
+  #executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+  #userDataDirectory = `C:/Users/${
+    os.userInfo().username
+  }/AppData/Local/Google/Chrome/User Data`;
 
   constructor() {
     if (os.type() === 'Linux') {
       this.#executablePath = `/opt/google/chrome/chrome`;
       this.#userDataDirectory = `/home/${os.userInfo.username}/.config/google-chrome/`;
-    } else {
-      this.#executablePath =
-        'C:/Program Files/Google/Chrome/Application/chrome.exe';
-      this.#userDataDirectory = `C:/Users/${
-        os.userInfo().username
-      }/AppData/Local/Google/Chrome/User Data`;
     }
   }
 
@@ -55,3 +56,5 @@ class Browser {
     });
   }
 }
+
+module.exports = Browser;
