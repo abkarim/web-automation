@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "puppeteer-core": "^19.6.3",
+    "puppeteer-core": "^19.6.3"
   },
   "devDependencies": {
     "eslint": "^8.33.0",
